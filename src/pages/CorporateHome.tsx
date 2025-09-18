@@ -42,41 +42,40 @@ const CorporateHome = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/60 rounded-lg"></div>
-            <span className="text-xl font-bold">Unboxd Corporate</span>
+      <header className="border-b border-gray-800 bg-black/90 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg"></div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Unboxd Corporate</span>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <Button variant="ghost" onClick={() => navigate("/corporate/partnerships")}>Partnerships</Button>
-            <Button variant="ghost" onClick={() => navigate("/corporate/dashboard")}>Dashboard</Button>
-            <Button variant="ghost" onClick={() => navigate("/")}>Personal Moves</Button>
-            {/* Changed to an existing route to avoid 404 on click */}
-            <Button onClick={() => navigate("/corporate/partnerships")}>Get Started</Button>
+          <nav className="hidden md:flex space-x-8">
+            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200" onClick={() => navigate("/corporate/partnerships")}>Partnerships</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200" onClick={() => navigate("/corporate/dashboard")}>Dashboard</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200" onClick={() => navigate("/")}>Personal Moves</Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105" onClick={() => navigate("/corporate/partnerships")}>Get Started</Button>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <Badge className="mb-4" variant="secondary">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div className="container mx-auto text-center max-w-5xl">
+          <Badge className="mb-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-500/30 text-blue-300 px-4 py-2 text-sm font-medium">
             Enterprise Moving Solutions
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
             Corporate Relocation Made Simple
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             Streamline your business relocations with our enterprise-grade platform. From staff moves to estate partnerships, we handle it all.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => navigate("/corporate/bulk-booking")} className="text-lg px-8">
-              Start Bulk Booking <ArrowRight className="ml-2 h-5 w-5" />
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <Button size="lg" onClick={() => navigate("/corporate/bulk-booking")} className="text-lg px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Start Bulk Booking <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
-            <Button size="lg" variant="outline" onClick={() => navigate("/corporate/partnerships")}>
+            <Button size="lg" variant="outline" onClick={() => navigate("/corporate/partnerships")} className="text-lg px-10 py-4 border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white rounded-xl transition-all duration-300">
               Become a Partner
             </Button>
           </div>
