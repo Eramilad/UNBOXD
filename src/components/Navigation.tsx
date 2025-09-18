@@ -36,13 +36,12 @@ const Navigation = () => {
               <a href="/signup" className="text-white hover:text-gray-300 text-sm font-medium">
                 Drive & Earn
               </a>
-              <a 
-                href="/corporate" 
+              <button 
                 className="text-white hover:text-gray-300 text-sm font-medium cursor-pointer"
                 onClick={() => navigate('/corporate')}
               >
                 Corporate
-              </a>
+              </button>
               <a href="#about" className="text-white hover:text-gray-300 text-sm font-medium">
                 About
               </a>
@@ -115,13 +114,12 @@ const Navigation = () => {
             <a href="/signup" className="text-white hover:text-gray-300 block px-3 py-2 text-base font-medium">
               Drive & Earn
             </a>
-            <a 
-              href="/corporate" 
-              className="text-white hover:text-gray-300 block px-3 py-2 text-base font-medium cursor-pointer"
+            <button 
+              className="text-white hover:text-gray-300 block px-3 py-2 text-base font-medium cursor-pointer w-full text-left"
               onClick={() => navigate('/corporate')}
             >
               Corporate Solutions
-            </a>
+            </button>
             <a href="#about" className="text-white hover:text-gray-300 block px-3 py-2 text-base font-medium">
               About
             </a>
