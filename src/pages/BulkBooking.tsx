@@ -164,7 +164,7 @@ const BulkBooking: React.FC = () => {
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Corporate
-            </Button>
+              </Button>
             <div className="h-6 w-px bg-gray-700"></div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Bulk Booking
@@ -176,20 +176,20 @@ const BulkBooking: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Progress Header */}
         <Card className="mb-8 bg-gray-900 border-gray-800">
-          <CardHeader>
+              <CardHeader>
             <div className="flex items-center justify-between">
-              <div>
+                  <div>
                 <CardTitle className="text-white">{getStepTitle()}</CardTitle>
                 <CardDescription className="text-gray-400">{getStepDescription()}</CardDescription>
-              </div>
+                  </div>
               <div className="text-right">
                 <div className="text-sm text-gray-400">Step {currentStep === 'upload' ? '1' : currentStep === 'edit' ? '2' : currentStep === 'preview' ? '3' : '4'} of 4</div>
                 <div className="text-lg font-semibold text-white">{getStepProgress()}%</div>
-              </div>
-            </div>
+                  </div>
+                </div>
             <Progress value={getStepProgress()} className="mt-4" />
-          </CardHeader>
-        </Card>
+              </CardHeader>
+            </Card>
 
         {/* Step Navigation */}
         <div className="flex justify-center mb-8">
@@ -202,19 +202,19 @@ const BulkBooking: React.FC = () => {
             <div className={`flex items-center space-x-2 ${currentStep === 'edit' ? 'text-blue-400' : 'text-gray-600'}`}>
               <Edit3 className="w-5 h-5" />
               <span className="text-sm font-medium">Edit</span>
-            </div>
+                    </div>
             <div className="w-8 h-px bg-gray-700"></div>
             <div className={`flex items-center space-x-2 ${currentStep === 'preview' ? 'text-blue-400' : 'text-gray-600'}`}>
               <CheckCircle className="w-5 h-5" />
               <span className="text-sm font-medium">Preview</span>
-            </div>
+                      </div>
             <div className="w-8 h-px bg-gray-700"></div>
             <div className={`flex items-center space-x-2 ${currentStep === 'confirm' ? 'text-blue-400' : 'text-gray-600'}`}>
               <CheckCircle className="w-5 h-5" />
               <span className="text-sm font-medium">Confirm</span>
-            </div>
-          </div>
-        </div>
+                                </div>
+                      </div>
+                    </div>
 
         {/* Step Content */}
         <div className="max-w-6xl mx-auto">
@@ -250,7 +250,7 @@ const BulkBooking: React.FC = () => {
               </CardContent>
             </Card>
           )}
-        </div>
+                </div>
 
         {/* Navigation Buttons */}
         {currentStep !== 'upload' && currentStep !== 'confirm' && (
@@ -261,8 +261,8 @@ const BulkBooking: React.FC = () => {
               className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
             >
               Back
-            </Button>
-            
+                </Button>
+
             {currentStep === 'edit' && (
               <Button
                 onClick={handleEditComplete}
