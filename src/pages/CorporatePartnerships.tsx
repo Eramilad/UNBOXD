@@ -86,13 +86,13 @@ const CorporatePartnerships = () => {
   const selectedPartnership = partnershipTypes.find(type => type.id === partnershipType);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="border-b bg-card">
+      <header className="border-b border-gray-800 bg-black/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl font-bold mb-4">Partnership Opportunities</h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-gray-300">
               Join our network of trusted partners and grow your business with Unboxd's moving solutions
             </p>
           </div>
@@ -101,7 +101,7 @@ const CorporatePartnerships = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-3 bg-gray-900/50">
             <TabsTrigger value="overview">Partnership Types</TabsTrigger>
             <TabsTrigger value="benefits">Benefits & Commission</TabsTrigger>
             <TabsTrigger value="application">Apply Now</TabsTrigger>
@@ -110,13 +110,13 @@ const CorporatePartnerships = () => {
           <TabsContent value="overview">
             <div className="grid md:grid-cols-2 gap-6">
               {partnershipTypes.map((type) => (
-                <Card key={type.id} className="hover:shadow-lg transition-shadow">
+                <Card key={type.id} className="hover:shadow-lg transition-shadow border-border/50 bg-gray-900">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <type.icon className="h-8 w-8 text-primary" />
                       <div>
-                        <CardTitle>{type.title}</CardTitle>
-                        <CardDescription>{type.description}</CardDescription>
+                        <CardTitle className="text-white">{type.title}</CardTitle>
+                        <CardDescription className="text-gray-300">{type.description}</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -137,7 +137,7 @@ const CorporatePartnerships = () => {
                       <h4 className="font-medium mb-2">Requirements:</h4>
                       <ul className="space-y-1">
                         {type.requirements.map((req, index) => (
-                          <li key={index} className="flex items-center text-sm text-muted-foreground">
+                          <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
                             {req}
                           </li>
@@ -146,7 +146,7 @@ const CorporatePartnerships = () => {
                     </div>
 
                     <Button 
-                      className="w-full" 
+                      className="w-full bg-primary text-white hover:bg-primary/90" 
                       onClick={() => setPartnershipType(type.id)}
                     >
                       Learn More
@@ -159,29 +159,29 @@ const CorporatePartnerships = () => {
 
           <TabsContent value="benefits">
             <div className="grid lg:grid-cols-2 gap-8">
-              <Card>
+              <Card className="bg-gray-900 border-border/50">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
+                  <CardTitle className="flex items-center text-white">
                     <TrendingUp className="h-5 w-5 mr-2" />
                     Commission Structure
                   </CardTitle>
-                  <CardDescription>Earn competitive commissions on every referral</CardDescription>
+                  <CardDescription className="text-gray-300">Earn competitive commissions on every referral</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                    <div className="flex justify-between items-center p-3 bg-green-950/30 rounded-lg">
                       <span className="font-medium">Real Estate Partners</span>
                       <Badge className="bg-green-100 text-green-800">20% Commission</Badge>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                    <div className="flex justify-between items-center p-3 bg-blue-950/30 rounded-lg">
                       <span className="font-medium">Hostel Partners</span>
                       <Badge className="bg-blue-100 text-blue-800">15% Commission</Badge>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
+                    <div className="flex justify-between items-center p-3 bg-purple-950/30 rounded-lg">
                       <span className="font-medium">Estate Managers</span>
                       <Badge className="bg-purple-100 text-purple-800">12% Commission</Badge>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
+                    <div className="flex justify-between items-center p-3 bg-orange-950/30 rounded-lg">
                       <span className="font-medium">Corporate HR</span>
                       <Badge className="bg-orange-100 text-orange-800">Volume Based</Badge>
                     </div>
@@ -189,13 +189,13 @@ const CorporatePartnerships = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-gray-900 border-border/50">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
+                  <CardTitle className="flex items-center text-white">
                     <Handshake className="h-5 w-5 mr-2" />
                     Partnership Benefits
                   </CardTitle>
-                  <CardDescription>Exclusive advantages for our partners</CardDescription>
+                  <CardDescription className="text-gray-300">Exclusive advantages for our partners</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -228,10 +228,10 @@ const CorporatePartnerships = () => {
               </Card>
             </div>
 
-            <Card className="mt-6">
+            <Card className="mt-6 bg-gray-900 border-border/50">
               <CardHeader>
-                <CardTitle>Revenue Calculator</CardTitle>
-                <CardDescription>Estimate your potential monthly earnings</CardDescription>
+                <CardTitle className="text-white">Revenue Calculator</CardTitle>
+                <CardDescription className="text-gray-300">Estimate your potential monthly earnings</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -245,8 +245,8 @@ const CorporatePartnerships = () => {
                   </div>
                   <div className="flex items-end">
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-green-600">₦50,000</p>
-                      <p className="text-sm text-muted-foreground">Est. Monthly Commission</p>
+                      <p className="text-2xl font-bold text-green-400">₦50,000</p>
+                      <p className="text-sm text-gray-400">Est. Monthly Commission</p>
                     </div>
                   </div>
                 </div>
@@ -256,10 +256,10 @@ const CorporatePartnerships = () => {
 
           <TabsContent value="application">
             <div className="max-w-2xl mx-auto">
-              <Card>
+              <Card className="bg-gray-900 border-border/50">
                 <CardHeader>
-                  <CardTitle>Partnership Application</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-white">Partnership Application</CardTitle>
+                  <CardDescription className="text-gray-300">
                     Submit your application to join our partner network
                   </CardDescription>
                 </CardHeader>
@@ -344,13 +344,13 @@ const CorporatePartnerships = () => {
                   </div>
 
                   {selectedPartnership && (
-                    <Card className="bg-blue-50 border-blue-200">
+                    <Card className="bg-blue-950/30 border-blue-900">
                       <CardContent className="pt-4">
                         <h4 className="font-medium mb-2">Partnership Benefits Summary:</h4>
                         <ul className="space-y-1 text-sm">
                           {selectedPartnership.benefits.map((benefit, index) => (
                             <li key={index} className="flex items-center">
-                              <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
+                              <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
                               {benefit}
                             </li>
                           ))}
@@ -359,11 +359,11 @@ const CorporatePartnerships = () => {
                     </Card>
                   )}
 
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full bg-primary text-white hover:bg-primary/90" size="lg">
                     Submit Application
                   </Button>
 
-                  <p className="text-xs text-muted-foreground text-center">
+                  <p className="text-xs text-gray-400 text-center">
                     Applications are typically reviewed within 3-5 business days. 
                     We'll contact you for next steps.
                   </p>

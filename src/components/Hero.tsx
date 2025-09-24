@@ -17,20 +17,20 @@ const Hero = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between py-12 sm:py-16 lg:py-24 gap-6">
           {/* Left Content */}
-          <div className="flex-1 lg:pr-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-black mb-8">
+          <div className="flex-1 lg:pr-16 w-full">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 sm:mb-8">
               Move your load anywhere with Unboxd
             </h1>
             
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
               Professional moving services at your fingertips. From small items to full apartments, we've got you covered.
             </p>
             
             <Button
               onClick={handleStartMoving}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-medium rounded-lg mb-8"
+              className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-medium rounded-lg mb-4 sm:mb-8"
             >
               Start moving today
             </Button>
@@ -46,9 +46,9 @@ const Hero = () => {
           </div>
           
           {/* Right Image */}
-          <div className="flex-1 lg:pl-8 mt-8 lg:mt-0">
+          <div className="flex-1 lg:pl-8 mt-6 lg:mt-0 w-full">
             <img
-              className="w-full h-96 object-cover rounded-lg"
+              className="w-full h-56 sm:h-72 md:h-80 lg:h-96 object-cover rounded-lg"
               src={heroMovingTruck}
               alt="Professional moving truck being loaded with boxes and furniture"
             />
